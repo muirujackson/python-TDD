@@ -1,0 +1,28 @@
+From ``my_module`` module
+========================
+
+Using ``add`` function
+======================
+
+::
+
+	>>> add = __import__('my_module').add
+	>>> add(2,2)
+	4
+
+::
+
+	>>> add(-1, 9)
+	8
+
+::
+
+	>>> add("g", 8)
+	Traceback (most recent call last):
+	TypeError: a must be an interger/float
+
+::
+
+	>>> add(None)
+	Traceback (most recent call last):
+	TypeError: add() missing 1 required positional argument: 'b'
